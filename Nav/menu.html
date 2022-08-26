@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Paradise - Menu</title>
+    <link rel="icon" type="image/x-icon" href="image2/favicon.png">
+    <script src="https://kit.fontawesome.com/b93b68e4d6.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar {
+            background-color: seashell;
+
+        }
+
+        #move {
+            border-width: 0px;
+            border-style: none;
+            width: 100%
+        }
+
+        #repeat {
+            text-decoration: none;
+            color: #ff044f;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .add {
+            display: flex;
+        }
+
+        /*--------------------Creating Slideshow---------------------*/
+        .slideshow {
+            width: 60%;
+            height: 450px;
+            overflow: hidden;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            vertical-align: middle;
+        }
+
+        .photo1,
+        .photo2,
+        .photo3,
+        .photo4 {
+            position: absolute;
+            width: 100%;
+            height: 420px;
+
+        }
+
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .next {
+            text-align: center;
+            margin-top: 415px;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /*---------------Title-------------------------*/
+        .poster {
+            background-color: powderblue;
+            color: sienna;
+            font-size: 80px;
+            text-align: center;
+        }
+
+        /*--------------Navbar-------------------------------------*/
+        .navbar {
+            background-color: black;
+            height: 50px;
+        }
+
+        .navbar nav ul li {
+            display: inline-block;
+            list-style-type: none;
+            margin-top: 10px;
+        }
+
+        .navbar nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 28px 26px;
+
+        }
+
+        /*------------------------Menu------------------------------*/
+        #breakfast {
+            padding: 20px 0;
+            color: #ababab;
+            height: 100vh;
+            margin-top: 100px;
+            background-color: black
+        }
+
+        #breakfast h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .work-title {
+            display: flex;
+            margin-top: 70px;
+            margin-left: 50px;
+            margin-right: 50px
+        }
+
+        .items {
+            float: left;
+            margin: 0 auto;
+            height: 350px;
+            width: 32%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .items img {
+            height: 350px;
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .items:hover .layer {
+            height: 350px;
+        }
+
+        .items:hover img {
+            transform: scale(1.1);
+        }
+
+        .btn {
+            display: block;
+            margin: 50px auto;
+            width: fit-content;
+            text-decoration: none;
+            color: lightgreen;
+            border: 1px solid #ff044f;
+            margin-top: 50px;
+            border-radius: 6px;
+            padding: 14px 50px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ff044f;
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), #ff044f);
+            /* adding colour and opacity*/
+            border-radius: 10px;
+            position: absolute;
+            /* Used to bring text over image */
+            left: 0;
+            /* Used to bring text over image */
+            bottom: 0;
+            /* Used to bring text over image */
+            overflow: hidden;
+            /* Used to bring text over image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: height 0.5s;
+
+        }
+
+        .layer p {
+            color: white;
+            font-size: 25px;
+        }
+
+        .layer h2 {
+            color: #fff;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <marquee id="move" behavior="ALTERNATE" scrollamount="3" scrolldelay="0" scrollspeed="200">
+            <a id="repeat" href="#" target="_blank">WELCOME TO THE PARADISE....THE HEAVEN OF FOOD....GRAB A
+                CHAIR....RELAX....AND....ENJOY PREMIUM QUALITY FOOD....WITH HEAVENLY ATMOSPHERE !!!</a>
+        </marquee>
+    </div>
+    <div class="add">
+        <div class="slideshow">
+            <div class="mySlides fade"><img class='photo1' src="image2/dish 1.jpg" alt="Image 1" /></div>
+            <div class="mySlides fade"><img class='photo2' src="image2/dish 2.jpg" alt="Image 2" /></div>
+            <div class="mySlides fade"><img class='photo3' src="image2/dish 3.jpg" alt="Image 3" /></div>
+            <div class="mySlides fade"><img class='photo4' src="image2/dish 4.jpg" alt="Image 4" /></div>
+            <br>
+            <div class="next">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="poster">
+            <h1>OUR MENU</h1>
+        </div>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#">Breakfast</a></li>
+                <li><a href="#">Quick Bites</a></li>
+                <li><a href="#">Pizza</a></li>
+                <li><a href="#">Burger</a></li>
+                <li><a href="#">Chinese</a></li>
+                <li><a href="#">North Indian</a></li>
+                <li><a href="#">South Indian</a></li>
+                <li><a href="#">Main Course</a></li>
+                <li><a href="#">Rice & Bread</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li><a href="#">Salads & Raita</a></li>
+                <li><a href="#">Beverages</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">BREAKFASTS</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/pos.jpeg" alt="Poori Sabji">
+                <div class="layer">
+                    <h2>Poori Sabji With Jalebi</h2>
+                    <p>Rs. 60<br> (4 Pooris & 2 pieces of Jalebi)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/ps.jpg" alt="Paratha Sabji">
+                <div class="layer">
+                    <h2>Paratha Sabji</h2>
+                    <p>Rs. 50<br> (2 Parathas) </p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/ks.jpg" alt="Kachori Sabji">
+                <div class="layer">
+                    <h2>Kachori Sabji</h2>
+                    <p>Rs. 50 <br>(4 Kachoris) </p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">QUICK BITES</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/pani puri.jpg" alt="Paani Poori">
+                <div class="layer">
+                    <h2>Paani Poori</h2>
+                    <p>Rs. 50<br> (6 Pieces)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/sev puri.jpg" alt="Sev Puri">
+                <div class="layer">
+                    <h2>Sev Poori</h2>
+                    <p>Rs. 65<br> (6 Pieces) </p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/rajk.jpg" alt=" Raj Kachori">
+                <div class="layer">
+                    <h2>Raj Kachori</h2>
+                    <p>Rs. 80 <br></p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Pizza</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/Margherita.jpg" alt="Margherita">
+                <div class="layer">
+                    <h2>Margherita</h2>
+                    <p>Rs. 100<br> (Regular)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/Peppy_Paneer.jpg" alt="Peppy Paneer">
+                <div class="layer">
+                    <h2>Peppy Peppy Paneer</h2>
+                    <p>Rs. 249<br> (Regular) </p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/Mexican_Green_Wave.jpg" alt="Mexican Green Wave">
+                <div class="layer">
+                    <h2>Mexican Green Wave</h2>
+                    <p>Rs. 299 <br>(Regular)</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Burger</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/cvdp.jpg" alt="Crispy Veg Double Patty Burger">
+                <div class="layer">
+                    <h2>Crispy Veg Double Patty Burger</h2>
+                    <p>Rs. 80</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/cvwcb.jpg" alt="Crispy Veg With Cheese Burger">
+                <div class="layer">
+                    <h2>Crispy Veg With Cheese Burger</h2>
+                    <p>Rs. 80</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/cvdp2.jpg" alt="Classic Veg Double Patty Burger">
+                <div class="layer">
+                    <h2>Classic Veg Double Patty Burger</h2>
+                    <p>Rs. 119</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Chinese</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/fr.jpg" alt="Fried Rice">
+                <div class="layer">
+                    <h2>Fried Rice</h2>
+                    <p>Rs.200<br>(Full Plate)</p>
+                    <p>Rs.120<br>(Half Plate)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/cp.jpg" alt="Chilli Paneer">
+                <div class="layer">
+                    <h2>Chilli Paneer</h2>
+                    <p>Rs.220<br>(Full Plate)</p>
+                    <p>Rs.130<br>(Half Plate)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/man.jpg" alt="Manchurian">
+                <div class="layer">
+                    <h2>Manchurian</h2>
+                    <p>Rs.220<br>(Full Plate)</p>
+                    <p>Rs.130<br>(Half Plate)</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">North Indian</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/cb.jpg" alt="Chole Bhature">
+                <div class="layer">
+                    <h2>Chole Bhature</h2>
+                    <p>Rs.160<br>(2 Bhature)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/pb.jpg" alt="Pav Bhaji">
+                <div class="layer">
+                    <h2>Pav Bhaji</h2>
+                    <p>Rs.150</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/db.jpeg" alt="Rajesthani Daal-Bati">
+                <div class="layer">
+                    <h2>Rajesthani Daal-Bati</h2>
+                    <p>Rs.200</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">South Indian</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/dosa.jpg" alt="Masala Dosa">
+                <div class="layer">
+                    <h2>Masala Dosa</h2>
+                    <p>Rs.150</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/idli sambhar.jpg" alt="Idli Sambhar">
+                <div class="layer">
+                    <h2>Idli Sambhar</h2>
+                    <p>Rs.140<br>(4 Pieces)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/sambhar vada.jpg" alt="Vada Sambhar">
+                <div class="layer">
+                    <h2>Vada Sambhar</h2>
+                    <p>Rs.120<br>(4 Pieces)</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Main Course</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/kadhai paneer.jpg" alt="Kadhai Paneer">
+                <div class="layer">
+                    <h2>Kadhai Paneer</h2>
+                    <p>Rs. 180</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/sahi paneer.jpg" alt="Sahi Paneer">
+                <div class="layer">
+                    <h2>Sahi Paneer</h2>
+                    <p>Rs. 150</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/dal makhni.jpg" alt="Dal Makhni">
+                <div class="layer">
+                    <h2>Dal Makhni</h2>
+                    <p>Rs. 160</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Rice & Bread</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/Pulav.jpg" alt="Pulao">
+                <div class="layer">
+                    <h2>Pulao</h2>
+                    <p>Rs. 150</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/Plain butter naan.jpg" alt="Plain Butter Naan">
+                <div class="layer">
+                    <h2>Plain Butter Naan</h2>
+                    <p>Rs. 12 <br>(Per Piece)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/garlic naan.jpg" alt="Garlic Naan">
+                <div class="layer">
+                    <h2>Garlic Naan</h2>
+                    <p>Rs. 15 <br>(Per Piece)</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Desserts</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/gulab jamun.jpg" alt="Gulab Jamun">
+                <div class="layer">
+                    <h2>Gulab Jamun</h2>
+                    <p>Rs. 15<br>(Per Piece)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/ras malai.jpg" alt="Ras Malai">
+                <div class="layer">
+                    <h2>Ras Malai</h2>
+                    <p>Rs. 25 <br>(Per Piece)</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/gajar ka halwa.jpg" alt="Gajar Ka Halwa">
+                <div class="layer">
+                    <h2>Gajar Ka Halwa</h2>
+                    <p>Rs. 50</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Salads & Raita</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/kachumbar salad.jpg" alt="Kachumbar Salad">
+                <div class="layer">
+                    <h2>Kachumbar Salad</h2>
+                    <p>Rs. 50</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/sprouted moong bean.jpg" alt="Sprouted Moong Beans">
+                <div class="layer">
+                    <h2>Sprouted Moong Beans</h2>
+                    <p>Rs. 50</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/pr.jpg" alt="Fresh Pineapple Raita">
+                <div class="layer">
+                    <h2>Fresh Pineapple Raita</h2>
+                    <p>Rs. 60</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <div id="breakfast">
+        <h1 class="me">Bevrages</h1>
+        <div class="work-title">
+            <div class="items">
+                <img src="image2/adrak chai.jpg" alt="Adrak Chai">
+                <div class="layer">
+                    <h2>Adrak Chai</h2>
+                    <p>Rs. 20</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/coffee.jpg" alt="Coffee">
+                <div class="layer">
+                    <h2>Coffee</h2>
+                    <p>Rs. 40</p>
+                </div>
+            </div>
+            <div class="items">
+                <img src="image2/punjabi lassi.jpg" alt="Punjabi Lassi">
+                <div class="layer">
+                    <h2>Punjabi Lassi</h2>
+                    <p>Rs. 60</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">View All</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!---------------------Creating slideshow-------------------------->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+    <!------------------------Creating Side Menu In Small Screens----------------------------->
+
+</body>
+
+</html>

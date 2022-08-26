@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Paradise - Vision & Mission</title>
+    <link rel="icon" type="image/x-icon" href="image2/favicon.png">
+    <script src="https://kit.fontawesome.com/b93b68e4d6.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .top-bar {
+            background-color: seashell;
+
+        }
+
+        #move {
+            border-width: 0px;
+            border-style: none;
+            width: 100%
+        }
+
+        #repeat {
+            text-decoration: none;
+            color: #ff044f;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .title {
+            display: flex;
+            background-color: lightyellow;
+        }
+
+        .logo img {
+            margin-left: 20px;
+            margin-top: 10px;
+            width: 100%;
+            height: 100px;
+        }
+
+        .poster {
+            margin: auto;
+        }
+
+        .poster h1 {
+            text-align: center;
+            color: darkgreen;
+            font-size: 100px;
+            font-weight: bolder;
+        }
+
+        .navbar {
+            background-color: black;
+            height: 60px;
+        }
+
+        .navbar ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin-top: 15px;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 30px 30px;
+            font-size: 16px;
+            
+
+        }
+
+        .navbar ul li a:hover {
+            color: #ff044f;
+        }
+
+        .image{
+            margin-top: 10px;
+        }
+        .image img {
+            height: 500px;
+            width: 70%;
+            margin-left:250px;
+            margin-top: 10px;
+        }
+
+        .header {
+            height: 300px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 50px;
+
+
+        }
+
+        .header p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 25px;
+
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background: #262626;
+            font-weight: 200;
+            margin-top: 5px;
+            color: oldlace;
+        }
+
+        .copyright i {
+            color: #ff044f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <marquee id="move" behavior="ALTERNATE" scrollamount="3" scrolldelay="0" scrollspeed="200">
+            <a id="repeat" href="#" target="_blank">WELCOME TO THE PARADISE....THE HEAVEN OF FOOD....GRAB A
+                CHAIR....RELAX....AND....ENJOY PREMIUM QUALITY FOOD....WITH HEAVENLY ATMOSPHERE !!!</a>
+        </marquee>
+    </div>
+    <div class="title">
+        <div class="logo">
+            <img src="image2/logo.png" alt="Poster">
+        </div>
+        <div class="poster">
+            <h1>THE PARADISE</h1>
+        </div>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#" class="active-tab">ABOUT US</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">SPECIALS</a></li>
+                <li><a href="#">OFFERS</a></li>
+                <li><a href="#">ORDER &nbsp;ONLINE</a></li>
+                <li><a href="#">RESERVE &nbsp;A &nbsp;TABLE</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">JOIN &nbsp;US</a></li>
+                <li><a href="#">LOCATIONS</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div class="image">
+        <img src="image2/About us 1.png" alt="about us">
+    </div>
+    <div class="header">
+        <h1>A PASSION TO SERVE</h1>
+        <p>Four simple words comprise The Paradise's mission statement:</p>
+    </div>
+    <div class="image">
+        <img src="image2/founder.png" alt="founder">
+    </div>
+    <div class="header">
+        <h1>WHERE IT ALL BEGAN...</h1>
+        <p>Our founder, Sarthak Holmes, had an idea to create a restaurant that was more than a place that served great
+            food. Sarthak wanted to give locals a place where they’d always feel at home. A place where they could get
+            no-nonsense food at down-to-earth prices, and where they’d be treated right by people who had a passion to
+            serve.
+
+            The culture at The Paradise restaurant was instilled by Sarthak long before a mission statement was
+            ever written down on paper and is still evident today. At The Paradise, guests, team members and
+            community are all treated with respect.</p>
+    </div>
+    <div class="image">
+        <img src="image2/About us 2.png" alt="founder">
+    </div>
+    <div class="header">
+        <h1>SOMETHING FOR EVERYONE</h1>
+        <p>We’re loved for our special Basket Chaat, our signature Cheese Burst Pizza, our famous Malai Lassi and more.
+            All are served in a distinctly hearty heavenly style, enjoyed over good
+            times with great family and friends. Simple, honest, genuine food. Never pretentious. Always satisfying.</p>
+    </div>
+    <div class="image">
+        <img src="image2/About us 3.png" alt="founder">
+    </div>
+    <div class="header">
+        <h1>ALWAYS THE REAL DEAL</h1>
+        <p>Our inviting, comfortable dining room is the perfect place to enjoy a great meal. Our grab a seat at our
+            neighborhood community tables provide an energetic and lively atmosphere that is perfect
+            for our famous Thursday Night Trivia.
+
+            The Paradise is headquartered in Lucknow and is proud to serve more than 20 million
+            guests a year in over 100 restaurants throughout the World. We will continue to prosper and grow and
+            will continue to take care of every guest who walks through our doors, just like we’ve always done.
+
+            We treat people right, and that’s what makes new guests feel welcome, and regulars feel right at home.</p>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ The Paradise. All rights reserved.<br> Made with <i class="fas fa-heart"></i> by Shrey.</p>
+    </div>
+</body>
+
+</html>
